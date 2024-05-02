@@ -11,3 +11,14 @@ This is called resource contention - multiple tasks racing to use a common resou
 
 To solve this issue, we can make task1 to lock this resource and not to relaese it until it finishes printing its full message. This is done using semaphore/mutex - kind of lock.
 Or we can also config the kernel to use cooperative scheduling.
+
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+If we change configUSE_PREEMPTION to 0, there is no preemption and only task1 runs w/o being interrupted. Task2 never runs.
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Now, lets use coperative scheduling - prj - 002_hello_world_cooperative_scheduling
